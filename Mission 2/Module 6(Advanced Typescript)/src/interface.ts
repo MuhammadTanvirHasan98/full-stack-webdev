@@ -72,3 +72,40 @@ type Add = (a: number, b: number) => number;
 const add: Add = (a, b) => a + b;
 console.log(add(5, 10));
 
+
+interface ISubtract {
+    (a: number, b: number): number;
+}
+
+const subtract: ISubtract = (a, b) => a - b;
+console.log(subtract(10, 5));
+
+
+type Friends = string[];
+
+const friends: Friends = ['Ahmed', 'Sara', 'Omar'];
+                          //  0       1       2 // index
+
+ interface IFriends {
+    [index: number]: string;
+ }
+ const friends2: IFriends = ['Laila', 'Yusuf', 'Mona'];
+ console.log(friends2);    
+ 
+ type numbers = number[];
+ const numbers: numbers = [1, 2, 3, 4, 5];
+
+ interface INumbers {
+    [index: number]: number;
+ }
+    const numbers2: INumbers = [10, 20, 30, 40, 50];
+    console.log(numbers2);
+
+
+ type RGB = [number, number, number];
+
+ const red: RGB = [255, 0, 0];
+ console.log({red});
+
+
+
